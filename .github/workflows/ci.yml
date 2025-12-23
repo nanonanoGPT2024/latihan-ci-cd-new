@@ -24,3 +24,7 @@ jobs:
       run: |
         chmod +x mvnw
         ./mvnw clean test -f simple-hello-springboot/pom.xml
+    
+     - name: Build JAR
+      run: |
+        ./mvnw clean package -DskipTests -f simple-hello-springboot/pom.xml
