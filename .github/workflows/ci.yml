@@ -28,3 +28,7 @@ jobs:
     - name: Build JAR
       run: |
         ./mvnw clean package -DskipTests -f simple-hello-springboot/pom.xml
+
+    - name: Rename JAR
+      run: |
+        mv simple-hello-springboot/target/*.jar simple-hello-springboot/target/app.jar
