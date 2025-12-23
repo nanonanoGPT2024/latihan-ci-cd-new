@@ -21,4 +21,6 @@ jobs:
         distribution: 'temurin'
 
     - name: Build & Test
-      run: ./mvnw clean test
+      run: |
+        chmod +x mvnw
+        ./mvnw clean test -f simple-hello-springboot/pom.xml
